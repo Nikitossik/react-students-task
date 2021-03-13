@@ -37,10 +37,10 @@ class CalcAvgForm extends React.Component{
             }
         }
 
-        mark = +(total / n).toFixed(1);
+        if (n !== 0) mark = +(total / n).toFixed(1);
 
         this.setState({
-            avgMark: isNan(mark) ? 0 : mark
+            avgMark: mark
         });
     }
 
